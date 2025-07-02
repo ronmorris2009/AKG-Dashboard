@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKG Command Center</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: yellow;
+    }
+    .header {
+      text-align: center;
+      padding: 20px;
+      font-size: 28px;
+      background-color: #222;
+      border-bottom: 2px solid #444;
+      color: yellow;
+    }
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+    .card {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border: 1px solid #444;
+      border-radius: 12px;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .card:hover {
+      background-color: #333;
+    }
+    .card h2, .card p {
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">AKG Command Center</div>
+  <div class="dashboard">
+    <div class="card" onclick="openDashboard('Daily Report')">
+      <h2>Daily Report Dashboard</h2>
+      <p>Log and review daily job reports</p>
+    </div>
+    <div class="card" onclick="openDashboard('Bid Proposal')">
+      <h2>Bid Proposal Dashboard</h2>
+      <p>Create and manage project bids</p>
+    </div>
+    <div class="card" onclick="openDashboard('Invoice')">
+      <h2>Invoice Dashboard</h2>
+      <p>Generate and track invoices</p>
+    </div>
+    <div class="card" onclick="openDashboard('Payroll')">
+      <h2>Payroll Dashboard</h2>
+      <p>View and manage employee payroll</p>
+    </div>
+    <div class="card" onclick="openDashboard('Estimator')">
+      <h2>Estimator Dashboard</h2>
+      <p>Access cost estimation tools</p>
+    </div>
+    <div class="card" onclick="openDashboard('Architect')">
+      <h2>Architect Dashboard</h2>
+      <p>Design and blueprint environment</p>
+    </div>
+    <div class="card" onclick="openDashboard('Firebase')">
+      <h2>Firebase Dashboard</h2>
+      <p>Open Firebase console</p>
+    </div>
+    <div class="card" onclick="openDashboard('Google')">
+      <h2>Google Dashboard</h2>
+      <p>Access Google services and tools</p>
+    </div>
+  </div>
+
+  <script>
+    function openDashboard(name) {
+      alert(`Opening ${name} Dashboard...`);
+      // You can replace alert() with actual navigation logic if needed.
+    }
+  </script>
+</body>
+</html>
