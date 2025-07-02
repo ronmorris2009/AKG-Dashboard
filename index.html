@@ -1,32 +1,64 @@
-<h2>📋 Daily Report Dashboard</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AKG Daily Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .container {
+      padding: 20px;
+    }
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: 2px solid #444;
+      border-radius: 8px;
+    }
+    .submit-btn {
+      margin-top: 30px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #ffc107;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>📋 AKG Daily Report Dashboard</header>
+  <div class="container">
 
-<iframe 
-  src="https://docs.google.com/spreadsheets/d/1sCfs6xAJlJMi1kNOZPbriTQdi-p0OW7qSNF-yx2B4nc/edit?usp=sharing" 
-  width="100%" 
-  height="800" 
-  style="border: 1px solid #ccc; border-radius: 6px;">
-</iframe>
+    <!-- 👇 Replace this URL with YOUR published sheet -->
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-YOUR_SHEET_ID/pubhtml?widget=true&amp;headers=false"></iframe>
 
-<br><br>
+    <!-- 👇 Replace with YOUR Google Script URL -->
+    <button class="submit-btn" onclick="triggerGoogleScript()">✅ Submit Daily Report</button>
+  </div>
 
-<button onclick="triggerGoogleScript()" style="
-  background-color: #ffc107;
-  color: black;
-  font-size: 18px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-">
-✅ Submit Daily Report
-</button>
-
-<script>
-  function triggerGoogleScript() {
-    fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
-      method: 'POST',
-      mode: 'no-cors'
-    });
-    alert('📤 Report sent! Check your email for confirmation.');
-  }
-</script>
+  <script>
+    function triggerGoogleScript() {
+      fetch('https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec', {
+        method: 'POST',
+        mode: 'no-cors'
+      });
+      alert('📤 Report sent!');
+    }
+  </script>
+</body>
+</html>
